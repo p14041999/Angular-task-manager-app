@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+$yellow:#26FF9E;
+$green:#F0D671;
+
+$light:#F9F9F9;
+$primary:#7FEBBE;
+$dark:#2f2f2f;
+
+html{
+  background: linear-gradient(to bottom left,$green,$yellow);
+}
+
+html,body{
+  font-family: 'Poppins', sans-serif;
+  height:100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+// Default Classes
+.text-dark{
+  color:$dark;
+}
+.text-primary{
+  color: $primary;
+}
+.text-light{
+  color:$light;
+}
+.btn{
+  border:none;
+  background: none;
+  padding:5px;
+  width:auto;
+  cursor: pointer;
+}
+
+.btn-outline-primary{
+  border:2px solid $primary;
+  color:$primary;
+  font-size: 18px;
+  &:hover{
+    background-color:$primary;
+    color:$light;
+  }
+  &:active{
+    //box-shadow: #7FEBBE!important;
+  }
+  &:focus{
+    outline: none;
+  }
+}
+
+.btn-primary{
+  border:2px solid $primary;
+  background-color:$primary;
+  color:$light;
+  font-size: 18px;
+  &:hover{
+    color:$primary;
+    background: none;
+  }
+}
+.btn-circle{
+  border-radius: 50%;
+  &:focus{
+    outline: none;
+  }
+  &:active{
+    outline: none;
+  }
+}
+
+.align-bottom{
+  position:absolute;
+  right:20px;
+  bottom: 20px;
+
+}
+
+.plus{
+  height:40px;
+  width:40px;
+  border-radius: 50%;
+  background-color: $primary;
+}
+.plus:after{
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  height: 2px;
+  margin-top:-1px;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  z-index: 9;
+}
+.plus:before{
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  width: 2px;
+  margin-left: -1px;
+  left: 50%;
+  top: 10px;
+  bottom: 10px;
+  z-index: 9;
+}
